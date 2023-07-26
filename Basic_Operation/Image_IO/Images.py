@@ -1,0 +1,56 @@
+
+
+import cv2
+
+# --------------------- Read image --------------------- #
+
+## Load a color image, grayscale image and image with all information
+
+# img_color = cv2.imread('OpenCV_Logo.png', cv2.IMREAD_COLOR)
+img_color = cv2.imread('OpenCV_Logo.png', 1)
+
+# img_gray = cv2.imread('OpenCV_Logo.png', cv2.IMREAD_GRAYSCALE)
+img_gray = cv2.imread('OpenCV_Logo.png', 0)
+
+# img_unchange = cv2.imread('OpenCV_Logo.png', cv2.IMREAD_UNCHANGED)
+img_unchange = cv2.imread('OpenCV_Logo.png', -1)
+
+#---------- Display image using openCV library ----------#
+
+# If you uncomment Line 35 and run, you will find that no image shows
+# that is because image shows and destroy in a very short of time
+# cv2.imshow('image', img_color)
+
+# display image
+cv2.imshow('image', img_gray)
+
+# wait, press any key to continue
+cv2.waitKey(0)
+
+# destroy all windows
+cv2.destroyAllWindows()
+
+#---------------------------------#
+# Display image using matplotlib
+#---------------------------------#
+
+## import library or function
+# from matplotlib import pyplot as plt
+#
+## add "%matplotlib inline" to show image inline in jupyter notebook
+# %matplotlib inline
+#
+## Display color image on jupyter notebook
+# plt.imshow(img_color)
+
+# ----------------- Save or write image -----------------#
+
+# The image will save under your work directory
+cv2.imwrite('test_save.png',img_gray)
+
+
+
+# Reference:
+# Website: Opencv-Python Tutorials
+# Link: https://opencv-python-tutroals.readthedocs.io/
+# en/latest/py_tutorials/py_tutorials.html
